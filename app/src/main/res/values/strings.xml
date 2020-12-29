@@ -1,12 +1,3 @@
 <resources>
-<<<<<<< HEAD
-    <string name="app_name">SocioDetect</string>
-=======
-    <!---Base Application Theme. -->
-    <style name="AppTheme" parent="Theme.Design.Light.NoActionBar">
-        <!---Customization of Theme Here. -->
-        <item name="colorPrimary">@color/colorBG</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
->>>>>>> commit
+
 </resources>
