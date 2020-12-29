@@ -6,5 +6,6 @@
         <item name="colorPrimaryVariant">@color/colorBG</item>
         <!-- Status Bar Color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:background">@color/colorBG</item>
     </style>
 </resources>
