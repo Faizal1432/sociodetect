@@ -15,7 +15,7 @@
         android:textSize="25sp"
         android:textStyle="bold"
         android:textColor="@color/colorAccent"
-        android:layout_margin="12dp"/>
+        android:layout_margin="15dp"/>
 
     <GridLayout
         android:layout_width="match_parent"
