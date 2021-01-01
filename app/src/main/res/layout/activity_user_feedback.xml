@@ -4,18 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBG"
+    android:background="@color/colorSemiBG"
+    android:orientation="vertical"
     tools:context=".UserFeedback">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/FeedbackTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send Us Feedback!"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="95dp"
+        android:text="Feedback Form"
         android:textColor="@color/colorAccent"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30sp"/>
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Your Name"
+        android:textSize="20dp"
+        android:backgroundTint="@color/colorBlue"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="160dp"
+        android:backgroundTint="@color/colorBlue"
+        android:hint="Email"
+        android:textSize="20dp"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="220dp"
+        android:backgroundTint="@color/colorBlue"
+        android:gravity="top"
+        android:hint="Your Feedback"
+        android:fitsSystemWindows="true"
+        android:breakStrategy="balanced"
+        android:textSize="20dp"
+        android:inputType="textMultiLine"
+        android:singleLine="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="100dp"
+        android:background="@color/colorAccent"
+        android:elevation="5dp"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:text="Submit"
+        android:textColor="@color/colorBG"/>
 
 </RelativeLayout>
