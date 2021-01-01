@@ -11,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My Dashboard"
+        android:text="Main Menu"
         android:textSize="25sp"
         android:textStyle="bold"
         android:textColor="@color/colorAccent"
@@ -24,7 +24,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:columnCount="2"
-        android:rowCount="4">
+        android:rowCount="4"
+        android:background="@color/transparent">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardProfile"
@@ -37,7 +38,8 @@
             android:layout_gravity="fill"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/colorBG">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -71,7 +73,8 @@
             android:layout_gravity="fill"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/colorBG">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -105,7 +108,8 @@
             android:layout_gravity="fill"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/colorBG">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -139,7 +143,8 @@
             android:layout_gravity="fill"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/colorBG">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -173,7 +178,8 @@
             android:layout_gravity="fill"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/colorBG">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -207,7 +213,8 @@
             android:layout_gravity="fill"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/colorBG">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -241,7 +248,8 @@
             android:layout_gravity="fill"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/colorBG">
 
             <LinearLayout
                 android:layout_width="wrap_content"

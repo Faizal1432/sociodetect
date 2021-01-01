@@ -7,4 +7,6 @@
     <color name="colorBlue">#086788</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorTransparentBG">#00FFF1D0</color>
+    <color name="colorSemiBG">#80FFF1D0</color>
 </resources>
