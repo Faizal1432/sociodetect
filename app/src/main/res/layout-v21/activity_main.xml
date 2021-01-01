@@ -25,7 +25,7 @@
         android:layout_marginBottom="20dp"
         android:columnCount="2"
         android:rowCount="4"
-        android:background="@color/transparent">
+        android:background="@color/colorTransparentBG">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardProfile"
