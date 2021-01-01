@@ -30,12 +30,16 @@ public class MainActivity extends AppCompatActivity {
         cardFeedback = findViewById(R.id.cardFeedback);
         cardLogout = findViewById(R.id.cardLogout);
 
-        cardProfile.setOnClickListener(new View.OnClickListener() {
+        cardFeedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(this, UserFeedback.class);
-                startActivity(intent);
+                openFeedback();
             }
         });
+    }
+
+    public void openFeedback() {
+        Intent intent = new Intent(this, UserFeedback.class);
+        startActivity(intent);
     }
 }
