@@ -41,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) { openInfo(); }
         });
+
+        cardCOVID.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { openCovid(); }
+        });
     }
 
     public void openFeedback() {
@@ -50,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openInfo() {
         Intent intent = new Intent(this, Infographics.class);
+        startActivity(intent);
+    }
+
+    public void openCovid() {
+        Intent intent = new Intent(this, Covid.class);
         startActivity(intent);
     }
 }
