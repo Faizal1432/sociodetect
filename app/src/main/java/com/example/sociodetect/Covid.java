@@ -20,7 +20,7 @@ public class Covid extends AppCompatActivity {
         WebSettings webSettings = web.getSettings();
         webSettings.setJavaScriptEnabled(true);
         web.setWebViewClient(new Callback());
-        web.loadUrl("https://covid19.who.int/");
+        web.loadUrl("https://www.arcgis.com/apps/opsdashboard/index.html#/85320e2ea5424dfaaa75ae62e5c06e61");
     }
 
     private class Callback extends WebViewClient {
