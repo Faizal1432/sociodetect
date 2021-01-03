@@ -36,10 +36,20 @@ public class MainActivity extends AppCompatActivity {
                 openFeedback();
             }
         });
+        
+        cardInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { openInfo(); }
+        });
     }
 
     public void openFeedback() {
         Intent intent = new Intent(this, UserFeedback.class);
+        startActivity(intent);
+    }
+
+    public void openInfo() {
+        Intent intent = new Intent(this, Infographics.class);
         startActivity(intent);
     }
 }

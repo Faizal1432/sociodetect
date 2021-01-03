@@ -9,17 +9,17 @@
     tools:context=".UserFeedback">
 
     <TextView
-        android:id="@+id/FeedbackTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
-        android:text="Feedback Form"
+        android:text="Submit Your Feedback!"
         android:textColor="@color/colorAccent"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:padding="5dp"
+        android:background="@drawable/border_text"/>
 
     <EditText
         android:id="@+id/PersonName"
