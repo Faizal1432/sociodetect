@@ -54,6 +54,14 @@
             android:layout_margin="20dp"
             android:adjustViewBounds="true"
             android:scaleType="fitStart"
+            android:src="@drawable/mco"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
             android:src="@drawable/mental_health"/>
      </LinearLayout>
 
