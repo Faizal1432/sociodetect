@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SocioDetect">
-        <activity android:name=".Infographics"></activity>
+        <activity android:name=".Covid"></activity>
+        <activity android:name=".Infographics" />
         <activity android:name=".UserFeedback" />
         <activity android:name=".MainActivity">
             <intent-filter>
