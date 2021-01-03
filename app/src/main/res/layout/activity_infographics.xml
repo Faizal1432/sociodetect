@@ -21,7 +21,7 @@
             android:text="COVID-19 Infographics"
             android:textColor="@color/colorAccent"
             android:textSize="30sp"
-            android:padding="5dp"
+            android:padding="10dp"
             android:background="@drawable/border_text"/>
 
         <ImageView
@@ -47,6 +47,14 @@
             android:adjustViewBounds="true"
             android:scaleType="fitStart"
             android:src="@drawable/mask_2"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/mental_health"/>
      </LinearLayout>
 
 </ScrollView>
