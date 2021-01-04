@@ -1,276 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/circle_cut"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Main Menu"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorAccent"
-        android:layout_margin="12dp"/>
-
-    <GridLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/textView"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:columnCount="2"
-        android:rowCount="4"
-        android:background="@color/colorTransparentBG">
+        android:layout_height="match_parent">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardProfile"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:layout_gravity="fill"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:cardUseCompatPadding="true"
-            app:cardBackgroundColor="@color/colorBG">
+            android:orientation="vertical" >
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/textView5"
                 android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/disclaimer"
+                android:textSize="30sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxAgreement"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:checked="false"
+                android:onClick="updateAgreement"
+                android:text="@string/agreement_checkbox" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_person" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Profile"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16sp"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardCamera"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:layout_gravity="fill"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:cardUseCompatPadding="true"
-            app:cardBackgroundColor="@color/colorBG">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <Switch
+                android:id="@+id/switchConserve"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:checked="true"
+                android:onClick="flipCautious"
+                android:text="@string/frequency_toggle_label" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_camera" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Camera"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16sp"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardCOVID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:layout_gravity="fill"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:cardUseCompatPadding="true"
-            app:cardBackgroundColor="@color/colorBG">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btnBroadcastBegin"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:drawableStart="@android:drawable/ic_menu_mylocation"
+                android:drawableLeft="@android:drawable/ic_menu_mylocation"
+                android:enabled="false"
+                android:onClick="startBroadcast"
+                android:text="@string/start_broadcast_btn_label" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_covid"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="COVID-19"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16sp"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardInfo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_row="1"
-            android:layout_column="1"
-            android:layout_gravity="fill"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:cardUseCompatPadding="true"
-            app:cardBackgroundColor="@color/colorBG">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btnBroadcastStop"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_info"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Infographics"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16sp"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardRisk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:layout_gravity="fill"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:cardUseCompatPadding="true"
-            app:cardBackgroundColor="@color/colorBG">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_riskcheck"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Risk Checker"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16sp"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardFeedback"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_row="2"
-            android:layout_column="1"
-            android:layout_gravity="fill"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:cardUseCompatPadding="true"
-            app:cardBackgroundColor="@color/colorBG">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_feedback"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Feedback"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16sp"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_row="3"
-            android:layout_column="0"
-            android:layout_gravity="fill"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:cardUseCompatPadding="true"
-            app:cardBackgroundColor="@color/colorBG">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_logout"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Logout"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16sp"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-    </GridLayout>
-</RelativeLayout>
+                android:drawableStart="@android:drawable/ic_delete"
+                android:drawableLeft="@android:drawable/ic_delete"
+                android:enabled="true"
+                android:onClick="stopBroadcast"
+                android:text="@string/stop_broadcast_btn_label" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
